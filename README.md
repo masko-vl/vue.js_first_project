@@ -1,6 +1,6 @@
 # airports
 
-> technical test for PASSNFLY
+> technical test 
 
 ## Build Setup
 
