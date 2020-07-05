@@ -35,7 +35,8 @@ export const store = new Vuex.Store({
       }
     },
     actions: {
-      fetchData({ commit }, { self })  {  
+      fetchData({ commit }, { self })  { 
+        //add data to vuex 
           axios({
             method: "GET",
             "url": "https://gist.githubusercontent.com/stepan-passnfly/8997fbf25ae87966e8919dc7803716bc/raw/37c07818c8498ae3d587199961233aada88ed743/airports.json"
@@ -63,10 +64,11 @@ export const store = new Vuex.Store({
             return state.data.find(event => event.id == id)
           },
         getFiltredByName: state => (text, select)=>{
+          //get searched airports
             return state.data.filter(
                 airport =>{ 
                     const keys= Object.keys(airport)
-                    //contain text + uppercase=lowercase
+                    //contain text + uppercase=lowercase:
                     const regex= new RegExp( text, "gi");
                     
                     for(let i=0; i<= keys.length; i++){

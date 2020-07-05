@@ -56,6 +56,7 @@ import Alert from './Alert';
       }
     },
     watch: {
+      //to show more than once the alerts
         writedAirport: function(){ 
             this.showAlert=false
         },
@@ -68,18 +69,19 @@ import Alert from './Alert';
         Alert
     },
     computed: {
+      //vuex finder
     ...mapGetters(['getFiltredByName'])
     },
     methods:{
         search: function(text, select){
             if(text&&select){
-               console.log(text+'   '+select); 
+               //console.log(text+'   '+select); 
                this.filtered=this.getFiltredByName(text, select)
 
-               console.log( this.filtered);
+               //console.log( this.filtered);
                if( this.filtered.length!==0){
+                 //show list component when there are element to show
                    this.active=true
-                   console.log('dsddsdsd');
                    
                }else{
                   //alert to complete

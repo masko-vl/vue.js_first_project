@@ -9,11 +9,6 @@
 <script>
 export default {
   name: 'searched_list',
-  data(){
-      return{
-           
-      }
-  },
   props:{
       active:false,
       filtered:{

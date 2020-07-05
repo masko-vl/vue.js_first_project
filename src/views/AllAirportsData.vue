@@ -7,7 +7,7 @@
 
 <template>
 <b-container fluid>
-<div class="home">
+<div>
   <div>
     <AddAirport/>
     <br><br>

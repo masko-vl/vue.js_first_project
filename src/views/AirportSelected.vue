@@ -1,14 +1,3 @@
-<style scoped>
-.addmargin {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.vue-logo-back {
-    background-color: black;
-}
-</style>
-
-
 <template>
   <div>
     <h3>SELECTED AIRPORT:</h3>
@@ -64,6 +53,7 @@ export default {
     },
      methods: {
         hideDetails: function() {
+            //back to main page
             this.$router.push("/all-airports");
         },
         selectProperty: function(airportData, atribute){
@@ -72,7 +62,6 @@ export default {
             
         },
         modificateElement: function(selectedAirport, item, newItem){
-            
              //this.$store.commit('MODIFICATE', selectedAirport, item, newItem)  
              
                 const index = this.$store.state.data.findIndex(stateAirport => stateAirport.id == selectedAirport.id)
@@ -84,11 +73,7 @@ export default {
                 //assign new value to the airport property selected
                  Object.assign(this.$store.state.data[index], item);
                  //doesn't save in vuex, in store.js isn't work
-                
-                
         }
-
-
     } 
 }
 </script>

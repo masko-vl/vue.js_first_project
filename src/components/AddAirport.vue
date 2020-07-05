@@ -111,13 +111,14 @@ export default {
         Alert
     },
     methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
+      onSubmit(event) {
+        event.preventDefault()
 
         //STILL NEEDED TO ADD FORM CONTROL ALERTS BEFORE SENDING TO DATA
 
         let newAirport = this.form
 
+        //id for new inser in the data
         newAirport.id= shortid.generate()
 
         this.$store.commit('ADD_FORM_DATA', newAirport)
@@ -130,8 +131,8 @@ export default {
 
         
       },
-      onReset(evt) {
-        evt.preventDefault()
+      onReset(event) {
+        event.preventDefault()
         // Reset our form values
         this.form.name = ''
         this.form.city = ''
